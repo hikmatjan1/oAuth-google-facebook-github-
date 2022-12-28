@@ -1,9 +1,9 @@
-import React from 'react'
-import { posts } from '../data'
+import React from 'react';
+import { useLocation } from 'react-router-dom';
 
 function Post() {
-
-    const post = posts[2];
+    const location = useLocation();
+    const post = location.state;
 
     return (
         <div className='post'>

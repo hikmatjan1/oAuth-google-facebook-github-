@@ -5,7 +5,7 @@ function Card({ post }) {
     const navigate = useNavigate();
 
     const clickHandler = (id) => {
-        navigate(`/post/${id}`);
+        navigate(`/post/${id}`, { state: post });
     }
 
     return (

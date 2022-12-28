@@ -222,3 +222,17 @@
     top: 180px;
     color: lightgray;
 }
+
+.link {
+    text-decoration: none;
+    color: #fff;
+}
+
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: darkgray;
+}
