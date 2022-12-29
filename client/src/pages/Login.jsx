@@ -1,15 +1,20 @@
 import React from 'react';
 import { CgGoogle } from 'react-icons/cg';
 import { ImFacebook, ImGithub } from 'react-icons/im';
+import { server_url } from '../config';
 
 function Login() {
+
+    const googleFunction = () => {
+        window.open(`${server_url}/auth/google`, "_self");
+    }
 
     return (
         <div className='login'>
             <h1 className='loginTitle'>Choose a Login Method</h1>
             <div className="wrapper">
                 <div className="left">
-                    <div className="loginButton google">
+                    <div className="loginButton google" onClick={googleFunction}>
                         <CgGoogle className='icon' />
                         Google
                     </div>
