@@ -9,6 +9,10 @@ function Login() {
         window.open(`${server_url}/auth/google`, "_self");
     }
 
+    const githubFunction = () => {
+        window.open(`${server_url}/auth/github`, "_self");
+    }
+
     return (
         <div className='login'>
             <h1 className='loginTitle'>Choose a Login Method</h1>
@@ -18,11 +22,11 @@ function Login() {
                         <CgGoogle className='icon' />
                         Google
                     </div>
-                    <div className="loginButton facebook">
+                    <div className="loginButton facebook" >
                         <ImFacebook className='icon' />
                         Facebook
                     </div>
-                    <div className="loginButton github">
+                    <div className="loginButton github" onClick={githubFunction}>
                         <ImGithub className='icon' />
                         Github
                     </div>
