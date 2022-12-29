@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import Post from "./pages/Post";
 import Login from "./pages/Login";
 import Navbar from './components/Navbar';
+import { server_url } from './config';
 import './App.css';
 
 function App() {
@@ -11,7 +12,7 @@ function App() {
 
   useEffect(() => {
     const getUser = () => {
-      fetch("http://localhost:5000/auth/login/success", {
+      fetch(`${server_url}/auth/login/success`, {
         method: "GET",
         credentials: "include",
         headers: {
